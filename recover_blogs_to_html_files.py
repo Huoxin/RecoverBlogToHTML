@@ -45,7 +45,7 @@ def get_blog_body_in_single_file_write_in_html(file_name):
 		blog_body = blog_body[1:len(blog_body)-3]
 		blog_body = blog_body.replace('\\/','/') #清除</\p>中的/
 		blog_body = blog_body.replace('\\r\\n','') #清除\r\n
-		blog_body = blog_body.replace('\\n','<br />') #清除\r\n
+		blog_body = blog_body.replace('\\n','<br />') #将\n转换为html标识<br />
 		blog_file_name.write('<h1>'+blog_title.decode('utf-8').encode('gb18030')+'</h1>')
 		try:
 			blog_file_name.write(blog_body.decode('utf-8').encode('gb18030'))
